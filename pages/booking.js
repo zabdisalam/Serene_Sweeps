@@ -24,6 +24,7 @@ import {
 import Select from "react-select";
 import { countries } from "countries-list";
 import { useRouter } from "next/router";
+import Footer from "@/components/navigation/footer";
 
 const formatCardNumber = (value) => {
   const val = value.replace(/\s+/g, "").replace(/[^0-9]/gi, "");
@@ -339,6 +340,7 @@ Booking.getLayout = (page) => {
       <Navbar />
       <Header page="Booking" />
       {page}
+      <Footer />
     </PrimaryLayout>
   );
 };

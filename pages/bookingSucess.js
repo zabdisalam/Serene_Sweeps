@@ -1,4 +1,8 @@
 import { useRouter } from "next/router";
+import PrimaryLayout from "@/components/layouts/PrimaryLayout";
+import Navbar from "@/components/layouts/Navbar";
+import Header from "@/components/layouts/Header";
+import Footer from "@/components/navigation/footer";
 
 const BookingSuccess = () => {
   const router = useRouter();
@@ -33,6 +37,7 @@ BookingSuccess.getLayout = (page) => {
       <Navbar />
       <Header page="Booking Success" />
       {page}
+      <Footer />
     </PrimaryLayout>
   );
 };
