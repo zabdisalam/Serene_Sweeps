@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import PrimaryLayout from "@/components/layouts/PrimaryLayout";
 import Navbar from "@/components/layouts/Navbar";
-import Header from "@/components/layouts/Header";
+import Header from "@/components/navigation/header";
 import Footer from "@/components/navigation/footer";
 
 const BookingSuccess = () => {
