@@ -3,7 +3,7 @@ import PrimaryLayout from "@/components/layouts/PrimaryLayout";
 import Navbar from "@/components/layouts/Navbar";
 import Image from "next/image";
 import Header from "@/components/navigation/header";
-import staffData from "../data/staff.json";
+import staffData from "@/data/staff.json";
 import StaffCard from "@/components/staffCard";
 import Footer from "@/components/navigation/footer";
 
