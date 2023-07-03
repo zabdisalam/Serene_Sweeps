@@ -1,0 +1,44 @@
+[
+  {
+    "name": "John Smith",
+    "position": "Team Lead",
+    "image": "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    "service": "Carpet Cleaning",
+    "description": "John is an experienced cleaning professional with expertise in carpet cleaning. With attention to detail and exceptional skills, he ensures that your carpets are thoroughly cleaned, leaving them fresh and spotless."
+  },
+  {
+    "name": "Emily Johnson",
+    "position": "Cleaning Specialist",
+    "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+    "service": "Regular Cleaning",
+    "description": "Emily is a dedicated cleaning specialist who excels in providing top-notch regular cleaning services. With meticulous attention to detail, she ensures that every nook and corner of your home is cleaned to perfection."
+  },
+  {
+    "name": "Michael Davis",
+    "position": "Cleaning Technician",
+    "image": "https://images.unsplash.com/photo-1599566147214-ce487862ea4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=647&q=80",
+    "service": "Move-in/Move-out Cleaning",
+    "description": "As a skilled cleaning technician, Michael specializes in move-in/move-out cleaning. With his expertise and efficient approach, he ensures that your new space is fresh, sanitized, and ready for you to settle in."
+  },
+  {
+    "name": "Sarah Wilson",
+    "position": "Cleaning Specialist",
+    "image": "https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80",
+    "service": "Tile & Grout Cleaning",
+    "description": "Sarah specializes in tile and grout cleaning, using effective techniques to restore the beauty and cleanliness of your tiled surfaces. With her attention to detail, she leaves your tiles looking brand new."
+  },
+  {
+    "name": "David Thompson",
+    "position": "Cleaning Technician",
+    "image": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "service": "Upholstery Cleaning",
+    "description": "David is a skilled cleaning technician specializing in upholstery cleaning. With his expertise and gentle approach, he effectively removes dirt, stains, and allergens from your upholstery, leaving them fresh and revitalized."
+  },
+  {
+    "name": "Olivia Taylor",
+    "position": "Cleaning Specialist",
+    "image": "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    "service": "Pressure Washing",
+    "description": "Olivia specializes in pressure washing services, effectively removing grime, dirt, and stains from various surfaces. With her attention to detail and powerful equipment, she restores the pristine appearance of your outdoor spaces."
+  }
+]

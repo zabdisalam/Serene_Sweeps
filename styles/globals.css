@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-img {
+  height: 85vh;
+  width: 100vw;
+  object-fit: cover;
+  filter: brightness(0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.expand {
+  padding-top: 90vh;
+}
+
+.carousel-container {
+  width: 85vw; /* Adjust the width value as needed */
+  height: 65vh
+}
+
 /* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;

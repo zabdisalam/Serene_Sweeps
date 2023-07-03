@@ -1,212 +1,104 @@
-import { useEffect, useState, createElement } from "react";
+import { useEffect, useState } from "react";
 import {
   Navbar,
   Collapse,
   Typography,
   Button,
   IconButton,
-  List,
-  ListItem,
   Menu,
   MenuHandler,
   MenuList,
   MenuItem,
-  Chip,
+  Card,
 } from "@material-tailwind/react";
 import {
-  ChevronDownIcon,
-  UserCircleIcon,
-  CubeTransparentIcon,
-  Bars3Icon,
-  XMarkIcon,
-  FlagIcon,
-  ChatBubbleOvalLeftIcon,
-  UsersIcon,
-  FolderIcon,
   Square3Stack3DIcon,
-  RocketLaunchIcon,
-  FaceSmileIcon,
-  PuzzlePieceIcon,
-  GiftIcon,
+  ChevronDownIcon,
+  HomeModernIcon,
 } from "@heroicons/react/24/outline";
-
-const colors = {
-  blue: "bg-blue-50 text-blue-500",
-  orange: "bg-orange-50 text-orange-500",
-  green: "bg-green-50 text-green-500",
-  "blue-gray": "bg-blue-gray-50 text-blue-gray-500",
-  purple: "bg-purple-50 text-purple-500",
-  teal: "bg-teal-50 text-teal-500",
-  cyan: "bg-cyan-50 text-cyan-500",
-  pink: "bg-pink-50 text-pink-500",
-};
+import Link from "next/link";
 
 const navListMenuItems = [
   {
-    color: "blue",
-    icon: FlagIcon,
-    title: "About us",
-    description: "Learn about our story and our mission statement.",
+    title: "General Cleaning Services",
+    description: "Regular and move-in/out cleaning for everyday neatness.",
   },
   {
-    color: "orange",
-    icon: ChatBubbleOvalLeftIcon,
-    title: "Press",
-    description: "News and writings, press releases, and resources",
+    title: "Deep Cleaning Services",
+    description: "Intense cleaning for pristine spaces.",
   },
   {
-    color: "green",
-    icon: UsersIcon,
-    title: (
-      <div className="flex items-center gap-1">
-        Careers{" "}
-        <Chip
-          size="sm"
-          color="green"
-          variant="ghost"
-          value="We're hiring!"
-          className="capitalize"
-        />
-      </div>
-    ),
-    description: "We are always looking for talented people. Join us!",
-  },
-  {
-    color: "blue-gray",
-    icon: FolderIcon,
-    title: "Legal",
-    description: "All the stuff that we dan from legal made us add.",
-  },
-  {
-    color: "purple",
-    icon: RocketLaunchIcon,
-    title: "Products",
-    description: "Checkout our products that helps a startup running.",
-  },
-  {
-    color: "teal",
-    icon: FaceSmileIcon,
-    title: "Icons",
-    description: "Set of beautiful icons that you can use in your project.",
-  },
-  {
-    color: "cyan",
-    icon: PuzzlePieceIcon,
-    title: "UI Kits",
-    description: "High quality UI Kits helps you to 2x faster.",
-  },
-  {
-    color: "pink",
-    icon: GiftIcon,
-    title: "Open Source",
-    description: "List of all our open-source projects, it's all free.",
+    title: "Specialized Cleaning Services",
+    description: "Focused care for carpets, upholstery, and windows.",
   },
 ];
 
 function NavListMenu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const renderItems = navListMenuItems.map(
-    ({ icon, title, description, color }, key) => (
-      <a href="#" key={key}>
-        <MenuItem className="flex items-center gap-3 rounded-lg">
-          <div className={`rounded-lg p-5 ${colors[color]}`}>
-            {createElement(icon, {
-              strokeWidth: 2,
-              className: "h-6 w-6",
-            })}
-          </div>
-          <div>
-            <Typography
-              variant="h6"
-              color="blue-gray"
-              className="flex items-center text-sm"
-            >
-              {title}
-            </Typography>
-            <Typography variant="small" color="gray" className="font-normal">
-              {description}
-            </Typography>
-          </div>
+  const triggers = {
+    onMouseEnter: () => setIsMenuOpen(true),
+    onMouseLeave: () => setIsMenuOpen(false),
+  };
+
+  const renderItems = navListMenuItems.map(({ title, description }) => (
+    <Link href="/pricing" key={title} legacyBehavior>
+      <a>
+        <MenuItem>
+          <Typography variant="h6" color="blue-gray" className="mb-1">
+            {title}
+          </Typography>
+          <Typography variant="small" color="gray" className="font-normal">
+            {description}
+          </Typography>
         </MenuItem>
       </a>
-    )
-  );
+    </Link>
+  ));
 
   return (
     <>
-      <Menu
-        open={isMenuOpen}
-        handler={setIsMenuOpen}
-        offset={{ mainAxis: 20 }}
-        placement="bottom"
-        allowHover={true}
-      >
+      <Menu open={isMenuOpen} handler={setIsMenuOpen}>
         <MenuHandler>
-          <Typography as="div" variant="small" className="font-normal">
-            <ListItem
-              className="flex items-center gap-2 py-2 pr-4"
-              selected={isMenuOpen || isMobileMenuOpen}
-              onClick={() => setIsMobileMenuOpen((cur) => !cur)}
+          <Typography as="a" variant="small" className="font-normal">
+            <MenuItem
+              {...triggers}
+              className="hidden items-center gap-2 text-blue-gray-900 lg:flex lg:rounded-full"
             >
-              <Square3Stack3DIcon className="h-[18px] w-[18px]" />
-              Resources
+              <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Services{" "}
               <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`hidden h-3 w-3 transition-transform lg:block ${
+                strokeWidth={2}
+                className={`h-3 w-3 transition-transform ${
                   isMenuOpen ? "rotate-180" : ""
                 }`}
               />
-              <ChevronDownIcon
-                strokeWidth={2.5}
-                className={`block h-3 w-3 transition-transform lg:hidden ${
-                  isMobileMenuOpen ? "rotate-180" : ""
-                }`}
-              />
-            </ListItem>
+            </MenuItem>
           </Typography>
         </MenuHandler>
-        <MenuList className="hidden max-w-screen-xl rounded-xl lg:block">
-          <ul className="grid grid-cols-4 gap-y-2">{renderItems}</ul>
+        <MenuList
+          {...triggers}
+          className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid"
+        >
+          <Card
+            color="blue"
+            shadow={false}
+            variant="gradient"
+            className="col-span-3 grid h-full w-full place-items-center rounded-md"
+          >
+            <HomeModernIcon strokeWidth={1} className="h-28 w-28" />
+          </Card>
+          <ul className="col-span-4 flex w-full flex-col gap-1">
+            {renderItems}
+          </ul>
         </MenuList>
       </Menu>
-      <div className="block lg:hidden">
-        <Collapse open={isMobileMenuOpen}>{renderItems}</Collapse>
-      </div>
+      <MenuItem className="flex items-center gap-2 text-blue-gray-900 lg:hidden">
+        <Square3Stack3DIcon className="h-[18px] w-[18px]" /> Pages{" "}
+      </MenuItem>
+      <ul className="ml-6 flex w-full flex-col gap-1 lg:hidden">
+        {renderItems}
+      </ul>
     </>
-  );
-}
-
-function NavList() {
-  return (
-    <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-normal"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <CubeTransparentIcon className="h-[18px] w-[18px]" />
-          Blocks
-        </ListItem>
-      </Typography>
-      <NavListMenu />
-      <Typography
-        as="a"
-        href="#"
-        variant="small"
-        color="blue-gray"
-        className="font-normal"
-      >
-        <ListItem className="flex items-center gap-2 py-2 pr-4">
-          <UserCircleIcon className="h-[18px] w-[18px]" />
-          Account
-        </ListItem>
-      </Typography>
-    </List>
   );
 }
 
@@ -220,48 +112,123 @@ const NavigationBar = () => {
     );
   }, []);
 
+  const navList = (
+    <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <NavListMenu />
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/about" legacyBehavior>
+          <a className="flex items-center">About</a>
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/pricing" legacyBehavior>
+          <a className="flex items-center">Pricing</a>
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/staff" legacyBehavior>
+          <a className="flex items-center">Staff</a>
+        </Link>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-normal"
+      >
+        <Link href="/locations" legacyBehavior>
+          <a className="flex items-center">Locations</a>
+        </Link>
+      </Typography>
+    </ul>
+  );
+
   return (
-    <Navbar className="mx-auto max-w-screen-xl px-4 py-2">
+    <Navbar className="fixed top-0 z-10 h-max max-w-full rounded-none py-2 px-4 lg:px-8 lg:py-4">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography
           as="a"
-          href="#"
-          variant="h6"
-          className="mr-4 cursor-pointer py-1.5 lg:ml-2"
+          href="/"
+          className="mr-4 cursor-pointer py-1.5 font-medium"
         >
           Serene Sweeps
         </Typography>
-        <div className="hidden lg:block">
-          <NavList />
-        </div>
-        <div className="hidden gap-2 lg:flex">
-          <Button variant="gradient" size="sm">
-            Book Now
+        <div className="flex items-center gap-4">
+          <div className="mr-4 hidden lg:block">{navList}</div>
+          <Button
+            variant="gradient"
+            size="sm"
+            className="hidden lg:inline-block"
+          >
+            <Link href="/booking" legacyBehavior>
+              <a>
+                <span>Book Now</span>
+              </a>
+            </Link>
           </Button>
+          <IconButton
+            variant="text"
+            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+            ripple={false}
+            onClick={() => setOpenNav(!openNav)}
+          >
+            {openNav ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                className="h-6 w-6"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </IconButton>
         </div>
-        <IconButton
-          variant="text"
-          color="blue-gray"
-          className="lg:hidden"
-          onClick={() => setOpenNav(!openNav)}
-        >
-          {openNav ? (
-            <XMarkIcon className="h-6 w-6" strokeWidth={2} />
-          ) : (
-            <Bars3Icon className="h-6 w-6" strokeWidth={2} />
-          )}
-        </IconButton>
       </div>
       <Collapse open={openNav}>
-        <NavList />
-        <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-          <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-            Sign In
-          </Button>
-          <Button variant="gradient" size="sm" fullWidth>
-            Sign Up
-          </Button>
-        </div>
+        {navList}
+        <Button variant="gradient" size="sm" fullWidth className="mb-2">
+          <Link href="/booking" legacyBehavior>
+            <a>
+              <span>Book Now</span>
+            </a>
+          </Link>
+        </Button>
       </Collapse>
     </Navbar>
   );

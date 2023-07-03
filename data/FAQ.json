@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "What is the scope of your cleaning services?",
+    "answer": "We provide a range of services from general cleaning, deep cleaning, to specialized cleaning services. Each service is designed to meet different needs, from everyday cleaning tasks to intensive cleaning for special situations."
+  },
+  {
+    "id": 2,
+    "question": "Are your cleaning products safe for pets and kids?",
+    "answer": "Yes, we use cleaning products that are environmentally friendly and safe for both pets and children. Your family's safety and health are our top priority."
+  },
+  {
+    "id": 3,
+    "question": "Do I need to provide cleaning supplies?",
+    "answer": "No, our cleaning team comes fully equipped with all the necessary cleaning supplies and equipment. If you have specific products you'd like us to use, please let us know in advance."
+  },
+  {
+    "id": 4,
+    "question": "How do you determine pricing?",
+    "answer": "Pricing is determined based on the size of your home and the type of cleaning service you select. We offer a free quote before we begin so you know exactly what to expect."
+  },
+  {
+    "id": 5,
+    "question": "Can I book a cleaning service outside of business hours?",
+    "answer": "We strive to accommodate our clients' needs as best as we can. If you need a cleaning service outside of our regular business hours, please contact us and we'll do our best to make arrangements."
+  },
+  {
+    "id": 6,
+    "question": "What should I do if I'm not satisfied with the cleaning service?",
+    "answer": "We take client satisfaction very seriously. If you're not satisfied with our service, please contact us within 24 hours of the cleaning, and we'll make arrangements to address the issue."
+  }
+]

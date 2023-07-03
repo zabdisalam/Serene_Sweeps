@@ -1,0 +1,11 @@
+[
+  {
+    "title": "Information",
+    "items": [
+      { "name": "About us", "url": "/about" },
+      { "name": "Our Services", "url": "/services" },
+      { "name": "Booking", "url": "/booking" },
+      { "name": "Contact us", "url": "/about" }
+    ]
+  }
+]

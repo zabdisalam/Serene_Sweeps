@@ -2,6 +2,7 @@ import React from "react";
 import PrimaryLayout from "@/components/layouts/PrimaryLayout";
 import Navbar from "@/components/layouts/Navbar";
 import Image from "next/image";
+import Header from "@/components/navigation/header";
 
 const booking = () => {
   return (
@@ -15,6 +16,7 @@ booking.getLayout = (page) => {
   return (
     <PrimaryLayout>
       <Navbar />
+      <Header page="Booking" />
       {page}
     </PrimaryLayout>
   );

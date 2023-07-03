@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Basic Plan",
+    "price": 49,
+    "perks": [
+      "Regular Cleaning Services",
+      "Access to Customer Support",
+      "Flexible Scheduling",
+      "10% Discount on Additional Services",
+      "Satisfaction Guarantee"
+    ]
+  },
+  {
+    "name": "Premium Plan",
+    "price": 79,
+    "perks": [
+      "Deep Cleaning Services",
+      "Access to Customer Support",
+      "Priority Scheduling",
+      "15% Discount on Additional Services",
+      "Satisfaction Guarantee",
+      "Complimentary Carpet Cleaning (Once every 6 months)"
+    ]
+  },
+  {
+    "name": "Deluxe Plan",
+    "price": 99,
+    "perks": [
+      "Specialized Cleaning Services (Choose one: Carpet Cleaning, Upholstery Cleaning, or Window Cleaning)",
+      "Access to Customer Support",
+      "Priority Scheduling",
+      "20% Discount on Additional Services",
+      "Satisfaction Guarantee",
+      "Complimentary Deep Cleaning (Once every 3 months)"
+    ]
+  }
+]
