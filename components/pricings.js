@@ -1,6 +1,6 @@
 import React from "react";
 import Pricing from "./pricing";
-import pricings from "@/data/pricings.json";
+import pricings from "../data/pricings.json";
 
 const Pricings = () => {
   return (

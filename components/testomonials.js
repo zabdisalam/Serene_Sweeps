@@ -7,7 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { StarIcon } from "@heroicons/react/24/solid";
 import Testomonial from "./testomonial";
-import testimonialData from "@/data/testimonials.json";
+import testimonialData from "../data/testimonials.json";
 
 const Testomonials = () => {
   return (

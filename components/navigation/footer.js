@@ -1,5 +1,5 @@
 import React from "react";
-import LINKS from "@/data/footerLinks.json";
+import LINKS from "../../data/footerLinks.json";
 import { Typography } from "@material-tailwind/react";
 
 const Footer = () => {
