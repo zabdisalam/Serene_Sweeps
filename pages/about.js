@@ -22,8 +22,8 @@ const About = () => {
           About Us
         </Typography>
         <Typography className="text-center font-thin" variant="h6">
-          At Serene Sweeps, we believe a clean home is a serene home. We're a
-          team of professional cleaners dedicated to transforming houses into
+          At Serene Sweeps, we believe a clean home is a serene home. We&apos;re
+          a team of professional cleaners dedicated to transforming houses into
           immaculate homes.
         </Typography>
 
@@ -37,9 +37,9 @@ const About = () => {
 
         <Typography className="text-center font-thin mt-4" variant="h6">
           We understand that every home and business has its own unique cleaning
-          needs. That's why we tailor our cleaning services to fit your specific
-          requirements, ensuring that we leave your space spotlessly clean every
-          time.
+          needs. That&apos;s why we tailor our cleaning services to fit your
+          specific requirements, ensuring that we leave your space spotlessly
+          clean every time.
         </Typography>
 
         <Typography className="text-center font-thin mt-4" variant="h6">
@@ -49,9 +49,9 @@ const About = () => {
         </Typography>
 
         <Typography className="text-center font-thin mt-4" variant="h6">
-          We don't just clean houses—we bring peace, relaxation, and serenity to
-          your living and working spaces. Welcome to a cleaner, more serene
-          world with Serene Sweeps.
+          We don&apos;t just clean houses—we bring peace, relaxation, and
+          serenity to your living and working spaces. Welcome to a cleaner, more
+          serene world with Serene Sweeps.
         </Typography>
       </div>
       {/* contact us and Location*/}
