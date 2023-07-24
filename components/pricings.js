@@ -8,6 +8,7 @@ const Pricings = () => {
       {pricings.map((pricing, index) => (
         <Pricing
           key={index}
+          id={index}
           name={pricing.name}
           price={pricing.price}
           perks={pricing.perks}

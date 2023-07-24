@@ -28,7 +28,7 @@ const StaffCard = ({ service, image, name, description }) => {
         <Typography color="gray" className="font-normal mb-8">
           {description}
         </Typography>
-        <Link href="/booking" legacyBehavior>
+        <Link href="/booking/0" legacyBehavior>
           <a className="inline-block">
             <Button variant="text" className="flex items-center gap-2">
               Book

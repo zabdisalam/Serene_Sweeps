@@ -3,8 +3,8 @@
     "title": "Information",
     "items": [
       { "name": "About us", "url": "/about" },
-      { "name": "Our Services", "url": "/services" },
-      { "name": "Booking", "url": "/booking" },
+      { "name": "Our Services", "url": "/pricing" },
+      { "name": "Booking", "url": "/booking/0" },
       { "name": "Contact us", "url": "/about" }
     ]
   }

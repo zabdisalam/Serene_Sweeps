@@ -7,8 +7,11 @@ import {
   Button,
 } from "@material-tailwind/react";
 import { CheckIcon } from "@heroicons/react/24/outline";
+import { useRouter } from "next/router";
 
-const Pricing = ({ name, price, perks }) => {
+const Pricing = ({ name, price, perks, id }) => {
+  const router = useRouter();
+
   return (
     <Card color="blue" variant="gradient" className="w-full max-w-[20rem] p-8">
       <CardHeader
@@ -52,6 +55,9 @@ const Pricing = ({ name, price, perks }) => {
           className="text-blue-500 hover:scale-[1.02] focus:scale-[1.02] active:scale-100"
           ripple={false}
           fullWidth={true}
+          onClick={() => {
+            router.push(`/booking/${id + 1}`);
+          }}
         >
           Buy Now
         </Button>

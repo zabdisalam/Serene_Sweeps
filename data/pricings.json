@@ -3,7 +3,7 @@
     "name": "Basic Plan",
     "price": 49,
     "perks": [
-      "Regular Cleaning Services",
+      "General Cleaning Services",
       "Access to Customer Support",
       "Flexible Scheduling",
       "10% Discount on Additional Services",
@@ -26,7 +26,7 @@
     "name": "Deluxe Plan",
     "price": 99,
     "perks": [
-      "Specialized Cleaning Services (Choose one: Carpet Cleaning, Upholstery Cleaning, or Window Cleaning)",
+      "Specialized Cleaning Services",
       "Access to Customer Support",
       "Priority Scheduling",
       "20% Discount on Additional Services",

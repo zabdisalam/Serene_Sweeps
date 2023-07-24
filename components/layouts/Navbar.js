@@ -17,6 +17,7 @@ import {
   HomeModernIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navListMenuItems = [
   {
@@ -112,6 +113,8 @@ const NavigationBar = () => {
     );
   }, []);
 
+  const router = useRouter();
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       <NavListMenu />
@@ -173,13 +176,12 @@ const NavigationBar = () => {
           <Button
             variant="gradient"
             size="sm"
+            onClick={() => {
+              router.push("/booking/0");
+            }}
             className="hidden lg:inline-block"
           >
-            <Link href="/booking" legacyBehavior>
-              <a>
-                <span>Book Now</span>
-              </a>
-            </Link>
+            Book Now
           </Button>
           <IconButton
             variant="text"
@@ -222,12 +224,16 @@ const NavigationBar = () => {
       </div>
       <Collapse open={openNav}>
         {navList}
-        <Button variant="gradient" size="sm" fullWidth className="mb-2">
-          <Link href="/booking" legacyBehavior>
-            <a>
-              <span>Book Now</span>
-            </a>
-          </Link>
+        <Button
+          variant="gradient"
+          size="sm"
+          fullWidth
+          className="mb-2"
+          onClick={() => {
+            router.push("/booking/0");
+          }}
+        >
+          Book Now
         </Button>
       </Collapse>
     </Navbar>
