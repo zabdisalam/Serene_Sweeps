@@ -222,10 +222,10 @@ const Booking = () => {
               <TabPanel value="card" className="p-0">
                 <form className="mt-12 flex flex-col gap-4">
                   {submitted &&
-                    errorFields.map((field) => {
+                    errorFields.map((field, i) => {
                       if (errors[field]) {
                         return (
-                          <Alert color="red" variant="gradient">
+                          <Alert color="red" variant="gradient" key={i}>
                             <span>{errors[field]}</span>
                           </Alert>
                         );
@@ -341,10 +341,10 @@ const Booking = () => {
               <TabPanel value="paypal" className="p-0">
                 <form className="mt-12 flex flex-col gap-4">
                   {submitted &&
-                    errorFields.map((field) => {
+                    errorFields.map((field, i) => {
                       if (errors[field]) {
                         return (
-                          <Alert color="red" variant="gradient">
+                          <Alert color="red" variant="gradient" key={i}>
                             <span>{errors[field]}</span>
                           </Alert>
                         );
