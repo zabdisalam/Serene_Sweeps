@@ -323,7 +323,11 @@ const Booking = () => {
                         localStorage.getItem("formData")
                       );
                       localStorage.removeItem("formData");
-                      handleSubmit(formData);
+                      const errors = validateFields();
+                      if (Object.keys(errors).length === 0) {
+                        handleSubmit(formData);
+                      }
+                      setSubmitted(true);
                     }}
                   >
                     Pay Now
