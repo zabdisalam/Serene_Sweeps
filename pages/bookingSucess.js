@@ -21,11 +21,11 @@ const BookingSuccess = () => {
       <h1>Booking Success</h1>
       {/* Display the form data */}
       <p>Type: {type}</p>
-      <p>Card Number: {cardNumber}</p>
-      <p>Card Expires: {cardExpires}</p>
-      <p>Selected Country: {selectedCountry}</p>
-      <p>Selected Service: {selectedService}</p>
-      <p>Selected Staff: {selectedStaff}</p>
+      {cardNumber && <p>Card Number: {cardNumber}</p>}
+      {cardExpires && <p>Card Expires: {cardExpires}</p>}
+      {selectedCountry && <p>Selected Country: {selectedCountry}</p>}
+      {selectedService && <p>Selected Service: {selectedService}</p>}
+      {selectedStaff && <p>Selected Staff: {selectedStaff}</p>}
       {/* ... other code ... */}
     </div>
   );
